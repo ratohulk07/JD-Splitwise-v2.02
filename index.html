@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splitwise Lite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>💰 Splitwise Lite</h1>
+
+<div class="box">
+  <h3>👥 Add People</h3>
+  <input id="personInput" placeholder="Enter name">
+  <button onclick="addPerson()">Add</button>
+  <p id="peopleList"></p>
+</div>
+
+<div class="box">
+  <h3>📍 Create Trip</h3>
+  <input id="tripInput" placeholder="Trip name">
+  <button onclick="createTrip()">Create</button>
+
+  <select id="tripSelect" onchange="switchTrip()"></select>
+</div>
+
+<div id="app" style="display:none;">
+
+<div class="box">
+  <h3>➕ Add Expense</h3>
+
+  <input id="desc" placeholder="Description">
+  <input id="amount" type="number" placeholder="Amount">
+
+  <br>
+
+  <select id="payer"></select>
+
+  <h4>Participants</h4>
+  <div id="participants"></div>
+
+  <button onclick="addExpense()">Add Expense</button>
+</div>
+
+<div class="box">
+  <h3>📌 Expenses</h3>
+  <ul id="expenseList"></ul>
+</div>
+
+<div class="box">
+  <h3>⚖️ Balances</h3>
+  <ul id="balanceList"></ul>
+</div>
+
+<div class="box">
+  <h3>🤝 Settlement</h3>
+  <ul id="settlementList"></ul>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
